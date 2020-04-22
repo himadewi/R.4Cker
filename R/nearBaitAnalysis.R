@@ -67,7 +67,7 @@ nearBaitAnalysis <- function(obj, k){
   print(paste("BED file of highest interacting domains for near the bait on the cis chromosome are saved in ",
               obj@output_dir, sep = ""))
 #plot average profile of conditions
-  if(length(obj@samples) > 1){
+  if(length(obj@samples) > 0){ #fix to run with only 1 replicate
     norm_counts_avg=NULL
     j=1
     for(i in 1:length(obj@replicates)){
